@@ -92,6 +92,8 @@ print(Car.car_count)
 
 #삭제
 del car2
+
+print(car1.car_count)
 print(Car.car_count)
 
 # 인스터스 네임스페이스에 없으면 상위에서 검색
