@@ -63,3 +63,29 @@ print(('%s' % c + str(n) for c in ['A','B','C','D'] for n in range(1,21)))
 
 for s in ('%s' % c + str(n) for c in ['A','B','C','D'] for n in range(1,21)):
     print(s)
+
+print()
+
+# -------------리스트 주의---------------
+
+mark1 = [['~'] * 3 for _ in range(4)]
+mark2 = [['~'] * 3 ] * 4
+
+print(mark1)
+print(mark2)
+
+print()
+
+# 수정
+
+mark1[0][1] = 'x'
+mark2[0][1] = 'x'
+
+# mark1 은 ID 값 다름, mark2 는 ID값이 같아 모두 변경됨
+print(mark1)    #[['~', 'x', '~'], ['~', '~', '~'], ['~', '~', '~'], ['~', '~', '~']]
+print(mark2)    #[['~', 'x', '~'], ['~', 'x', '~'], ['~', 'x', '~'], ['~', 'x', '~']]
+
+# 증명
+print([id(i) for i in mark1])   # id 값 모두 다름
+print([id(i) for i in mark2])   # id 값 모두 같음
+
