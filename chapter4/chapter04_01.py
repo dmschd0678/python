@@ -1,7 +1,9 @@
 # chapter -4 - 01
 # 시퀀스형
+
 # 컨테이너(Container : 서로 다른 자료형을 담을 수 있는 자료형[list, tuple, collections, deque])
-# 플랫(Flat : 한개의 자료형을 담을 수 있는 자료형[str, bytes, bytearray, array.array, memoryview])
+# 플랫(Flat : 한 개의 자료형을 담을 수 있는 자료형[str, bytes, bytearray, array.array, memoryview])
+
 # 가변(list, bytearray, array.array, memoryview, deque)
 # 불변(tuple, str, bytes)
 
