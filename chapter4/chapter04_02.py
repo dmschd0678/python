@@ -57,7 +57,7 @@ print(m,id(m))
 # sort, sorted
 # reverse, key = len, key, str.lower, key = func...
 
-# sorted : 정렬 후 새로운 객체 변환
+# sorted : 정렬 후 새로운 객체 반환
 f_list = ["orange", "apple", "mango", "papaya","lemon","strawbetty", "coconut"]
 
 print("sorted : ",sorted(f_list))
