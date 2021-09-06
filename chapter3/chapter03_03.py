@@ -37,6 +37,7 @@ l_leng2 = sqrt((pt3.x - pt4.x) ** 2 + (pt3.y - pt4.y) ** 2)
 print(l_leng2)
 
 # 네임드 튜플 선언 방법
+print("네임드 튜플 선언")
 Point1 = namedtuple('Point', ['x','y'])
 Point2 = namedtuple('Point', 'x,y')
 Point3 = namedtuple('Point', "x y")
