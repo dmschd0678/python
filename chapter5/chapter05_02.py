@@ -72,8 +72,3 @@ print(averager_cls(10)) # inner >> [10] / 1
 print(averager_cls(30)) # inner >> [10, 30] / 2
 print(averager_cls(50)) # inner >> [10, 30, 50] / 3
 print(averager_cls(193))# inner >> [10, 30, 50, 193] / 4
-
-
-
-
-
