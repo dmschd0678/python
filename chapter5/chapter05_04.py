@@ -43,11 +43,11 @@ def perf_clock(func):
 
     return perf_clocked
 
-
+@perf_clock     # 데코레이터
 def time_func(seconds):
     time.sleep(seconds)
 
-
+@perf_clock     # 데코레이터
 def sum_func(*numbers):
     return sum(numbers)
 
@@ -63,6 +63,17 @@ print(none_deco2, none_deco2.__code__.co_freevars)
 print('-' * 40, 'Called None Decorator -> time_func')
 print()
 none_deco1(1.5)
+
 print('-' * 40, 'Called None Decorator -> sum_func')
 print()
 none_deco2(100, 200, 300, 400, 500)
+
+print()
+
+# 데코레이터 사용
+print('-' * 40, 'Called Decorator -> time_func')
+print()
+time_func(1,5)
+print('-' * 40, 'Called Decorator -> time_func')
+print()
+sum_func(100,200,300,400,500)
