@@ -97,6 +97,7 @@ gen9 = itertools.groupby('AAABBBCCCDDDEEE')
 # print(list(gen9))
 
 for chr, group in gen9:
+    print(chr, ":", list(group))
     ''' 출력 결과
     A : ['A', 'A', 'A']
     B : ['B', 'B', 'B']
@@ -104,7 +105,3 @@ for chr, group in gen9:
     D : ['D', 'D', 'D']
     E : ['E', 'E', 'E']
     '''
-    print(chr, ":", list(group))
-
-
-
