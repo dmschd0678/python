@@ -1,4 +1,4 @@
-# Chapter 07 - 01
+# Chapter 07 - 02
 # AsyncIO
 # 비동기 I/O Coroutine 작업
 # Generator 반복적인 객체 Return 사용
@@ -16,22 +16,28 @@ import timeit
 from urllib.request import urlopen
 from concurrent.futures import ThreadPoolExecutor
 import threading
+from bs4 import BeautifulSoup
 
 # 실행 시작
 start = timeit.default_timer()
 
 # 서비스 방향이 비슷한 사이트로 실습 권장(예 : 게시판성 커뮤니티)
-urls = ['https://daum.net','https://naver.com', 'https://mlbpark.donga.com','https://tistory.com','https://wemakeprice.com/']
+urls = ['http://daum.net','https://naver.com', 'http://mlbpark.donga.com','https://tistory.com','https://wemakeprice.com/']
 
 async def fetch(url, executor):
     # 쓰레드명 출력
     print('Thread Name :', threading.current_thread().getName(),'Start',url)
     # 실행
     res = await loop.run_in_executor(executor, urlopen, url)
+
+    soup = BeautifulSoup(res.read(), 'html.parser')
+    # 전체 페이지 소스 확인
+    # print(soup.prettify())
+    result_data = soup.title
     print('Thread Name :', threading.current_thread().getName(),'Done',url)
 
     # 결과 반환
-    return res.read()[0:5]
+    return result_data
 
 async def main():
     # 쓰레드 풀 생성
@@ -54,7 +60,7 @@ if __name__ == '__main__':
     # 작업 완료까지 대기
     loop.run_until_complete(main())
     # 수행 시간 계산
-    dutation = timeit.default_timer - start
+    dutation = timeit.default_timer() - start
 
     # 총 실행시간
     print('Total Running Time :',dutation)
