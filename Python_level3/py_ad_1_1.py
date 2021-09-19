@@ -57,11 +57,11 @@ barfoo()
 
 print("ex4 ->",d)
 
-# ex5 (중요)
+# ex5 (중요)  # 클로저 형식
 def outer():
     e = 70
     def inner():
-        nonlocal e
+        nonlocal e  # 변수 값 유지
         e += 10
         print("ex5 ->",e)
     return inner
@@ -88,7 +88,7 @@ print("ex7 ->",globals())
 # ex8 (지역 -> 변역 변수 생성)
 for i in range(1,10):
     for k in range(1,10):
-        globals()['plus_{}_{}'.format(i,k,)] = i + k
+        globals()['plus_{}_{}'.format(i,k,)] = i + k    # 변수 만들기
 
 print(globals())
 print("ex8 ->", plus_5_5)
