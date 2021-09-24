@@ -10,7 +10,7 @@ Keyword - Contextlib, __enter__, __exit__, exception
 """
 
 # ex1
-file = open('./textfile.txt','w')
+file = open('textfile.txt', 'w')
 try:
     file.write('Context Manager Test1\nContextlib Test1.')
 finally:
@@ -18,7 +18,7 @@ finally:
 
 # ex2
 
-with open('./textfile2.txt','w') as f:
+with open('textfile2.txt', 'w') as f:
     f.write('Context Manager Test1\nContextlib Test2.') # 알아서 자원 반환
 
 # ex3
@@ -39,5 +39,5 @@ class MyFileWriter():
             print("Logging exceprion {}".format((exc_type,value,trace_back)))
         self.file_obj.close()
 
-with MyFileWriter('./textfile3.txt','w') as f:
+with MyFileWriter('textfile3.txt', 'w') as f:
     f.write('Context Manager Test1\nContextlib Test3.')
