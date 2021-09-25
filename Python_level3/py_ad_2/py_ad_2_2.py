@@ -88,4 +88,4 @@ print('ex3 -> y : {}'.format(b.get_y()))
 # b._SampleB__y = 343
 
 print('ex3 ->',dir(b))
-print('ex3 ->',b.__dir__())
+
