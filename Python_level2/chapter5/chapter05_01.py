@@ -44,7 +44,7 @@ print([var_function(i) for i in range(1,6) if i % 2])
 
 print()
 
-# reduce
+# reduce+*
 from functools import reduce
 from operator import add
 
