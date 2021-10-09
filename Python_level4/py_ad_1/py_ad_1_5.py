@@ -15,7 +15,6 @@ Keyword - Many Threads(group Threads). concurrent.future, (xxx)PoolExecutor
 
 import logging
 from concurrent.futures import ThreadPoolExecutor
-import threading
 import time
 
 def task(name):
