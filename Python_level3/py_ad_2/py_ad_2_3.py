@@ -65,7 +65,7 @@ class SampleB():
     def y(self,value):
         # print('Called set method')
         if value < 0:
-            raise ValueError('0보다 큰 값을 입력하세요')
+            raise ValueError('0보다 큰 값을 입력하세요.')
         self.__y = value
 
     @y.deleter
