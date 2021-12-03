@@ -2,7 +2,7 @@ import numpy as np
 
 arr = np.random.randint(15, size = (3,4))
 print(arr)
-# print(np.sort(arr))
+# print(np.sort(arr))0
 # print(np.sort(arr, axis=0))
 print(np.sort(arr, axis=None))  # 1차원으로 정렬
 
